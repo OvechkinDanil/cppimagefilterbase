@@ -11,6 +11,8 @@ struct image_data
     stbi_uc *pixels;
     int w, h;
     int compPerPixel;
+
+    image_data Copy();
 };
 
 class png_toolkit
