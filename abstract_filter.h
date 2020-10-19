@@ -10,6 +10,7 @@ class AbstractFilter
 		{	
 		}
 		virtual void apply(image_data& imageData, std::vector<int> boarders) = 0;
+		virtual ~AbstractFilter() {};
 	protected:
 		int u;
 		int l;
