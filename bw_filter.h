@@ -12,7 +12,7 @@ class bwFilter : public AbstractFilter
 			
 		}
 		~bwFilter() {};
-		virtual void apply(image_data& imageData, std::vector<int> boarders) override;
+		virtual void apply(image_data& imageData, std::vector<int>& boarders) override;
 };
 
 
