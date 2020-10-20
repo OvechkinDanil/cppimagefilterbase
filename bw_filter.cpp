@@ -12,7 +12,6 @@ void bwFilter::apply(image_data& imageData, std::vector<int> boarders)
 	int upper = u == 0 ? 0 : imageData.h / u;
 	int bottom = b == 0 ? 0 : imageData.h / b;
 	int red, blue, green;
-	uint8_t value;
 	for (auto y = upper; y <= bottom; y++)
 	{
 		for (auto x = left; x <= right; x++)
