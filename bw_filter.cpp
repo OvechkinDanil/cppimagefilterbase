@@ -1,6 +1,6 @@
 #include "bw_filter.h"
 
-void bwFilter::apply(image_data& imageData, std::vector<int> boarders)
+void bwFilter::apply(image_data& imageData, std::vector<int>& boarders)
 {
 	int u = boarders[0];
 	int l = boarders[1];
