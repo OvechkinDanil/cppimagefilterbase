@@ -16,4 +16,4 @@ class bwFilter : public AbstractFilter
 };
 
 
-#endif BW_FILTER_H
+#endif //BW_FILTER_H

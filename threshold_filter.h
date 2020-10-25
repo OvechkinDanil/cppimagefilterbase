@@ -14,9 +14,9 @@ private:
 public:
 	thresholdFilter() { delta = 2; }
 	~thresholdFilter() {};
-	virtual void apply(image_data& imageData, std::vector<int> boarders) override;
+	virtual void apply(image_data& imageData, std::vector<int>& boarders) override;
 };
 
 
-#endif THRESHOLD_FILTER_H
+#endif //THRESHOLD_FILTER_H
 

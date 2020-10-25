@@ -12,9 +12,9 @@ public:
 
 	}
 	~redFilter() {};
-	virtual void apply(image_data& imageData, std::vector<int> boarders) override;
+	virtual void apply(image_data& imageData, std::vector<int>& boarders) override;
 };
 
 
-#endif RED_FILTER_H
+#endif //RED_FILTER_H
 

@@ -19,4 +19,4 @@ class AbstractFilter
 };
 
 
-#endif ABSTRACT_FILTER_H
+#endif //ABSTRACT_FILTER_H

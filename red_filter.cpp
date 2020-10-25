@@ -1,6 +1,6 @@
 #include "red_filter.h"
 
-void redFilter::apply(image_data& imageData, std::vector<int> boarders)
+void redFilter::apply(image_data& imageData, std::vector<int>& boarders)
 {
 	int u = boarders[0];
 	int l = boarders[1];

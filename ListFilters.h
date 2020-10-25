@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif LISTFILTERS_H
+#endif //LISTFILTERS_H

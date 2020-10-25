@@ -24,7 +24,7 @@ int thresholdFilter::GetMedian(image_data& imageData, int x_c, int y_c, int widt
 	return buf[buf.size() / 2];
 }
 
-void thresholdFilter::apply(image_data& imageData, std::vector<int> boarders)
+void thresholdFilter::apply(image_data& imageData, std::vector<int>& boarders)
 {
 	int u = boarders[0];
 	int l = boarders[1];
