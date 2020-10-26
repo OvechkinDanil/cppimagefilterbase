@@ -27,4 +27,4 @@ class ConfigParcer
 		std::vector<FilterData> ConfigData;
 };
 
-#endif CONFIG_PARCING_H
+#endif //CONFIG_PARCING_H

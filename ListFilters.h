@@ -15,7 +15,7 @@ private:
 public:
 	ListOfFilters();
 	AbstractFilter* Find(std::string filterName);
-	~ListOfFilters() {};
+	~ListOfFilters()=default;
 };
 
 

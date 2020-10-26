@@ -12,7 +12,7 @@
 //  return new bwFilter bw(data[0].boarders);
 //  return &bw;
 //}
-int main( int argc, char *argv[] )
+int main(int argc, char *argv[] )
 {
     // toolkit filter_name base_pic_name sudent_tool student_pic_name limitPix limitMSE
     // toolkit near test images!
@@ -35,6 +35,7 @@ int main( int argc, char *argv[] )
         {
           AF = lst->Find(filters.FilterName);
           AF->apply(pixels, filters.boarders);
+          delete AF;
         }
         delete lst;
         studTool.save(argv[3]);
@@ -45,6 +46,6 @@ int main( int argc, char *argv[] )
         std::cout << "Error: " << str << std::endl;
         return 1;
     }
-    
+
     return 0;
 }
