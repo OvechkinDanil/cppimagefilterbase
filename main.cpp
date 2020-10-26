@@ -23,8 +23,7 @@ int main(int argc, char *argv[] )
 
         png_toolkit studTool;
         ConfigParcer parcer;
-        ListOfFilters* lst = new ListOfFilters();
-        AbstractFilter* AF;
+        ListOfFilters lst;
         parcer.start(argv[1]);
         std::vector<FilterData> data = parcer.GetConfigData();
         
@@ -33,11 +32,8 @@ int main(int argc, char *argv[] )
        
         for (auto& filters : data)
         {
-          AF = lst->Find(filters.FilterName);
-          AF->apply(pixels, filters.boarders);
-          delete AF;
+          lst.Find(filters.FilterName)->apply(pixels, filters.boarders);
         }
-        delete lst;
         studTool.save(argv[3]);
 
     }

@@ -20,7 +20,7 @@ void bwFilter::apply(image_data& imageData, std::vector<int>& boarders)
 			red = imageData.pixels[pixel];
 			green = imageData.pixels[pixel + 1];
 			blue = imageData.pixels[pixel + 2];
-			int mono = (3* red + 6 * green + blue) / 10;
+			int mono = (3 * red + 6 * green + blue) / 10;
 			imageData.pixels[pixel] = mono;
 			imageData.pixels[pixel + 1] = mono;
 			imageData.pixels[pixel + 2] = mono;
