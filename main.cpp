@@ -36,6 +36,7 @@ int main( int argc, char *argv[] )
           AF = lst->Find(filters.FilterName);
           AF->apply(pixels, filters.boarders);
         }
+        delete lst;
         studTool.save(argv[3]);
 
     }
@@ -44,6 +45,6 @@ int main( int argc, char *argv[] )
         std::cout << "Error: " << str << std::endl;
         return 1;
     }
-
+    
     return 0;
 }
