@@ -4,7 +4,6 @@ ListOfFilters::ListOfFilters()
 {
 	FilterMap["Bw"] = new bwFilter();
 	FilterMap["Red"] = new redFilter();
-	FilterMap["Threshold"] = new thresholdFilter();
 }
 
 AbstractFilter* ListOfFilters::Find(std::string filterName)
