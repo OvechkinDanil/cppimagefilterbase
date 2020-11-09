@@ -23,17 +23,17 @@ int main(int argc, char *argv[] )
 
         png_toolkit studTool;
         ConfigParcer parcer;
-        ListOfFilters lst;
         parcer.start(argv[1]);
-        std::vector<FilterData> data = parcer.GetConfigData();
         
         studTool.load(argv[2]);
+        ListOfFilters lst;
         image_data pixels = studTool.getPixelData();
-       
+        std::vector<FilterData> data = parcer.GetConfigData();
         for (auto& filters : data)
         {
           lst.Find(filters.FilterName)->apply(pixels, filters.boarders);
         }
+
         studTool.save(argv[3]);
 
     }
