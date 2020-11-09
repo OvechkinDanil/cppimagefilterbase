@@ -15,6 +15,8 @@ void ConfigParcer::start(std::string ConfigFileName)
         int count = 0;
         while (getline(in, line, '\n'))
         {
+            if (line.length() == 0)
+                continue;
             FilterData filter;
             std::istringstream i(line);
             for (std::string str; i >> str;) {
