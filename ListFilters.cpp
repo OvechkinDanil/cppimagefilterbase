@@ -2,7 +2,6 @@
 
 ListOfFilters::ListOfFilters()
 {
-	FilterMap["Bw"] = new bwFilter();
 	FilterMap["Red"] = new redFilter();
 }
 
