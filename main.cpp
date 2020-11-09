@@ -27,11 +27,14 @@ int main(int argc, char *argv[] )
         
         studTool.load(argv[2]);
         ListOfFilters lst;
+        AbstractFilter* AF;
         image_data pixels = studTool.getPixelData();
         std::vector<FilterData> data = parcer.GetConfigData();
         for (auto& filters : data)
         {
-          lst.Find(filters.FilterName)->apply(pixels, filters.boarders);
+          AF = lst.Find(filters.FilterName);
+          AF->apply(pixels, filters.boarders);
+          delete AF;
         }
 
         studTool.save(argv[3]);
