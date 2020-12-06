@@ -1,8 +1,8 @@
 #include "config_parsing.h"
 
-ConfigParcer::ConfigParcer() {};
+ConfigParser::ConfigParser() {};
 
-void ConfigParcer::start(std::string ConfigFileName)
+void ConfigParser::start(std::string ConfigFileName)
 {
     std::ifstream in(ConfigFileName);
     if (!in.is_open())

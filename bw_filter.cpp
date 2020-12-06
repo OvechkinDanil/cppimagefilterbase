@@ -2,15 +2,11 @@
 
 void bwFilter::apply(image_data& imageData, std::vector<int>& boarders)
 {
-	int u = boarders[0];
-	int l = boarders[1];
-	int b = boarders[2];
-	int r = boarders[3];
+	int left = boarders[1] == 0 ? 0 : imageData.w / boarders[1];
+	int right = boarders[3] == 0 ? 0 : imageData.w / boarders[3];
+	int upper = boarders[0] == 0 ? 0 : imageData.h / boarders[0];
+	int bottom = boarders[2] == 0 ? 0 : imageData.h / boarders[2];
 
-	int left = l == 0 ? 0 : imageData.w / l;
-	int right = r == 0 ? 0 : imageData.w / r;
-	int upper = u == 0 ? 0 : imageData.h / u;
-	int bottom = b == 0 ? 0 : imageData.h / b;
 	int red, blue, green;
 	for (auto y = upper; y < bottom; y++)
 	{

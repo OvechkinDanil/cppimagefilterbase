@@ -13,16 +13,16 @@ struct FilterData
 	std::vector<int> boarders;
 };
 
-class ConfigParcer
+class ConfigParser
 {
 	public:
-		ConfigParcer();
+        ConfigParser();
 		void start(std::string ConfigFileName);
 		std::vector<FilterData> GetConfigData()
 		{
 			return ConfigData;
 		}
-		~ConfigParcer() {};
+		~ConfigParser() {};
 	private:
 		std::vector<FilterData> ConfigData;
 };

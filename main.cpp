@@ -22,19 +22,16 @@ int main(int argc, char *argv[] )
             throw "Not enough arguments";
 
         png_toolkit studTool;
-        ConfigParcer parcer;
-        parcer.start(argv[1]);
+        ConfigParser parser;
+        parser.start(argv[1]);
         
         studTool.load(argv[2]);
         ListOfFilters lst;
-        AbstractFilter* AF;
         image_data pixels = studTool.getPixelData();
-        std::vector<FilterData> data = parcer.GetConfigData();
+        std::vector<FilterData> data = parser.GetConfigData();
         for (auto& filters : data)
         {
-          AF = lst.Find(filters.FilterName);
-          AF->apply(pixels, filters.boarders);
-          delete AF;
+          lst.Find(filters.FilterName)->apply(pixels, filters.boarders);
         }
 
         studTool.save(argv[3]);

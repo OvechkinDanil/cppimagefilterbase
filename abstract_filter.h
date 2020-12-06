@@ -6,16 +6,9 @@
 class AbstractFilter
 {
 	public:
-		AbstractFilter() 
-		{	
-		}
+		AbstractFilter() = default;
 		virtual void apply(image_data& imageData, std::vector<int>& boarders) = 0;
-		virtual ~AbstractFilter() {};
-	protected:
-		int u;
-		int l;
-		int b;
-		int r;
+		virtual ~AbstractFilter() = default;
 };
 
 

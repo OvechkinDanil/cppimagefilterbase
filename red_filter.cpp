@@ -6,6 +6,7 @@ void redFilter::apply(image_data& imageData, std::vector<int>& boarders)
 	int l = boarders[1];
 	int b = boarders[2];
 	int r = boarders[3];
+
 	int left = l == 0 ? 0 : imageData.w / l;
 	int right = r == 0 ? 0 : imageData.w / r;
 	int upper = u == 0 ? 0 : imageData.h / u;

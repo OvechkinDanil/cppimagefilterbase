@@ -7,12 +7,9 @@
 class redFilter : public AbstractFilter
 {
 public:
-	redFilter()
-	{
-
-	}
-	~redFilter() {};
-	virtual void apply(image_data& imageData, std::vector<int>& boarders) override;
+	redFilter() = default;
+	~redFilter() override = default;
+	void apply(image_data& imageData, std::vector<int>& boarders) override;
 };
 
 
