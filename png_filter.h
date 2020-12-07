@@ -17,6 +17,7 @@ class support_filter {
 public:
 	void Monochrome(image_data& imgData, config_data& confData);
 	int Median(image_data& imgData, config_data& confData, std::vector<int> mBoarders);
+	int Clump(int num);
 };
 	
 
@@ -32,6 +33,21 @@ private:
 	int size_matrix = 5;
 };
 
+class Edge : public png_filter, support_filter {
+public:
+	virtual void filter(image_data& imgData, config_data& confData);
+private:
+	int size_matrix = 3;
+	int Convolution(image_data& imgData, config_data& confData, std::vector<int> mBoarders);
+};
+
+class Blur : public png_filter, support_filter {
+public:
+	virtual void filter(image_data& imgData, config_data& confData);
+private:
+	int size_matrix = 3;
+	void Convolution(image_data& imgData, config_data& confData, std::vector<int> mBoarders, int* result);
+};
 
 
 
