@@ -3,8 +3,6 @@
 filter_list::filter_list() {
 	list_of_filters["Red"] = new Red();
 	list_of_filters["Threshold"] = new Threshold();
-	list_of_filters["Blur"] = new Blur();
-	list_of_filters["Edge"] = new Edge();
 }
 
 png_filter* filter_list::find_filter(std::string name) {

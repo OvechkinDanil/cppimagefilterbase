@@ -15,17 +15,17 @@ int main( int argc, char *argv[] )
         if (argc != 4)
             throw "Not enough arguments";
 
-        png_toolkit studTool;
+    png_toolkit studTool;
 		config_reader configReader;
 		filter_list filterList;
 		std::vector<config_data> cnfData;
 		configReader.read(argv[1]);
-        studTool.load(argv[2]);
+    studTool.load(argv[2]);
 		image_data imgData = studTool.getPixelData();
 		configReader.toAreaBoarders(imgData.h, imgData.w);
 		cnfData = configReader.getConfigData();
 		for (auto& item : cnfData) {
-			filterList.find_filter(item.nameOfFilter)->filter(imgData, item);
+		filterList.find_filter(item.nameOfFilter)->filter(imgData, item);
 		}
         studTool.save(argv[3]);
     }
