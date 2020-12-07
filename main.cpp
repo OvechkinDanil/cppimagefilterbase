@@ -1,6 +1,3 @@
-#include <iostream>
-#include "config_parsing.h"
-#include "abstract_filter.h"
 #include "bw_filter.h"
 #include "red_filter.h"
 #include "threshold_filter.h"
