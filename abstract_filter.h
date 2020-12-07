@@ -3,12 +3,12 @@
 #include <vector>
 #include <iostream>
 #include "png_toolkit.h"
+#include "config_parsing.h"
 class AbstractFilter
 {
 	public:
-		AbstractFilter() = default;
-		virtual void apply(image_data& imageData, std::vector<int>& boarders) = 0;
-		virtual ~AbstractFilter() = default;
+		virtual void apply(image_data& imageData, FilterData& data ) = 0;
+		virtual ~AbstractFilter() { };
 };
 
 

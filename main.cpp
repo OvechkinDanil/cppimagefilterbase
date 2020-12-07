@@ -1,5 +1,4 @@
 #include <iostream>
-#include "png_toolkit.h"
 #include "config_parsing.h"
 #include "abstract_filter.h"
 #include "bw_filter.h"
@@ -7,11 +6,7 @@
 #include "threshold_filter.h"
 #include "ListFilters.h"
 
-//AbstractFilter* ChoseFilter(std::vector<FilterData> data)
-//{
-//  return new bwFilter bw(data[0].boarders);
-//  return &bw;
-//}
+
 int main(int argc, char *argv[] )
 {
     // toolkit filter_name base_pic_name sudent_tool student_pic_name limitPix limitMSE
@@ -28,10 +23,11 @@ int main(int argc, char *argv[] )
         studTool.load(argv[2]);
         ListOfFilters lst;
         image_data pixels = studTool.getPixelData();
+        parser.changeBoarders(pixels.h, pixels.w);
         std::vector<FilterData> data = parser.GetConfigData();
         for (auto& filters : data)
         {
-          lst.Find(filters.FilterName)->apply(pixels, filters.boarders);
+          lst.Find(filters.FilterName)->apply(pixels, filters);
         }
 
         studTool.save(argv[3]);

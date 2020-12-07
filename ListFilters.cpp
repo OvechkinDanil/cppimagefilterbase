@@ -10,7 +10,6 @@ AbstractFilter* ListOfFilters::Find(std::string filterName)
 	
 	if (FilterMap.find(filterName) != FilterMap.end())
 		return FilterMap.find(filterName)->second;
-
 	else
 		throw "Filter not found!";
 }

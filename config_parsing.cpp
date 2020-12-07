@@ -38,3 +38,23 @@ void ConfigParser::start(std::string ConfigFileName)
         in.close();
     }
 }
+
+void ConfigParser::changeBoarders(int h, int w)
+{
+    int tmp;
+    for (int j = 0; j < ConfigData.size(); j++)
+    {
+        for (int i = 0; i < this->ConfigData[j].boarders.size(); i++)
+        {
+            if (this->ConfigData[j].boarders[i] != 0)
+            {
+                tmp = this->ConfigData[j].boarders[i];
+                if (i == 0 || i == 2)
+                    this->ConfigData[j].boarders[i] = h / tmp;
+                else if (i == 1 || i == 3)
+                    this->ConfigData[j].boarders[i] = w / tmp;
+            }
+
+        }
+    }
+}

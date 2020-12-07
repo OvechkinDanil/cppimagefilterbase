@@ -18,10 +18,8 @@ class ConfigParser
 	public:
         ConfigParser();
 		void start(std::string ConfigFileName);
-		std::vector<FilterData> GetConfigData()
-		{
-			return ConfigData;
-		}
+		std::vector<FilterData> GetConfigData(){ return ConfigData; }
+		void changeBoarders(int h, int w);
 		~ConfigParser() {};
 	private:
 		std::vector<FilterData> ConfigData;
