@@ -13,3 +13,8 @@ AbstractFilter* ListOfFilters::Find(std::string filterName)
 	else
 		throw "Filter not found!";
 }
+
+ListOfFilters::~ListOfFilters()
+{
+    delete FilterMap["Red"];
+}
