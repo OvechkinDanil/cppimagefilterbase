@@ -1,9 +1,9 @@
 #ifndef ABSTRACT_FILTER_H
 #define ABSTRACT_FILTER_H
-#include <vector>
-#include <iostream>
+
 #include "png_toolkit.h"
 #include "config_parsing.h"
+
 class AbstractFilter
 {
 	public:

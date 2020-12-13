@@ -1,5 +1,6 @@
 #ifndef IMAGEFILTERS_BLUR_FILTER_H
 #define IMAGEFILTERS_BLUR_FILTER_H
+
 #include "support_filters.h"
 #include "abstract_filter.h"
 

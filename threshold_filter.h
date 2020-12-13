@@ -1,7 +1,7 @@
 #ifndef THRESHOLD_FILTER_H
 #define THRESHOLD_FILTER_H
+
 #include "abstract_filter.h"
-#include <algorithm>
 #include "support_filters.h"
 
 class thresholdFilter : public AbstractFilter, support_filters
