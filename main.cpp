@@ -1,6 +1,3 @@
-#include "bw_filter.h"
-#include "red_filter.h"
-#include "threshold_filter.h"
 #include "ListFilters.h"
 
 

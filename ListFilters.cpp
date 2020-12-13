@@ -3,6 +3,9 @@
 ListOfFilters::ListOfFilters()
 {
 	FilterMap["Red"] = new redFilter();
+	FilterMap["Threshold"] = new thresholdFilter();
+	FilterMap["Edge"] = new edgeFilter();
+	FilterMap["Blur"] = new blurFilter();
 }
 
 AbstractFilter* ListOfFilters::Find(std::string filterName)

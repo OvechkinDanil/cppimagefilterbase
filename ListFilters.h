@@ -6,6 +6,8 @@
 #include "bw_filter.h"
 #include "red_filter.h"
 #include "threshold_filter.h"
+#include "edge_filter.h"
+#include "blur_filter.h"
 
 
 class ListOfFilters
@@ -15,7 +17,6 @@ private:
 public:
 	ListOfFilters();
 	AbstractFilter* Find(std::string filterName);
-	~ListOfFilters();
 };
 
 
