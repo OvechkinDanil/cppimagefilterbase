@@ -9,7 +9,6 @@ class thresholdFilter : public AbstractFilter, support_filters
 private:
 	int delta = 5;
 public:
-	thresholdFilter() {}
 	virtual void apply(image_data& imageData, FilterData &data);
 };
 

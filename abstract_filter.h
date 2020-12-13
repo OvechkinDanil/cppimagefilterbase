@@ -8,7 +8,7 @@ class AbstractFilter
 {
 	public:
 		virtual void apply(image_data& imageData, FilterData& data ) = 0;
-		virtual ~AbstractFilter() { };
+		virtual ~AbstractFilter() {};
 };
 
 

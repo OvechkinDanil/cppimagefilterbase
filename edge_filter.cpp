@@ -37,7 +37,7 @@ void edgeFilter::apply(image_data &imageData, FilterData &data)
     delete [] curImage.pixels;
 }
 
-int edgeFilter::Convolution(image_data &imageData, FilterData &data, std::vector<int> boarders)
+int edgeFilter::Convolution(image_data &imageData, FilterData &data, std::vector<int>& boarders)
 {
     int index, counter = 0, res = 0, x, y;
 

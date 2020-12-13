@@ -20,7 +20,7 @@ void support_filters::BlackAndWhite(image_data &imageData, FilterData &data)
         }
 }
 
-int support_filters::Median(image_data &imageData, FilterData &data, std::vector<int> boarders)
+int support_filters::Median(image_data &imageData, FilterData &data, std::vector<int>& boarders)
 {
     std::vector<stbi_uc> elem;
     int i, j, index;

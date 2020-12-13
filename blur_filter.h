@@ -9,8 +9,7 @@ class blurFilter : public AbstractFilter, support_filters
 private:
     int delta = 3;
 public:
-    blurFilter() {}
-    void Convolution(image_data &imageData, FilterData &data, std::vector<int> boarders, int* resRGB);
+    void Convolution(image_data &imageData, FilterData &data, std::vector<int>& boarders, int* resRGB);
     virtual void apply(image_data& imageData, FilterData &data);
 };
 #endif //IMAGEFILTERS_BLUR_FILTER_H

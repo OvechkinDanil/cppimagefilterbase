@@ -1,6 +1,6 @@
 #include "blur_filter.h"
 
-void blurFilter::Convolution(image_data &imageData, FilterData &data, std::vector<int> boarders, int* resRGB)
+void blurFilter::Convolution(image_data &imageData, FilterData &data, std::vector<int>& boarders, int* resRGB)
 {
     int index;
     int size = 9;

@@ -1,7 +1,5 @@
 #include "config_parsing.h"
 
-ConfigParser::ConfigParser() {};
-
 void ConfigParser::start(std::string ConfigFileName)
 {
     std::ifstream in(ConfigFileName);

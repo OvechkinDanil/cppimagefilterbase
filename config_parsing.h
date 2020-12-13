@@ -16,7 +16,7 @@ struct FilterData
 class ConfigParser
 {
 	public:
-        ConfigParser();
+        ConfigParser() {};
 		void start(std::string ConfigFileName);
 		std::vector<FilterData> GetConfigData(){ return ConfigData; }
 		void changeBoarders(int h, int w);
