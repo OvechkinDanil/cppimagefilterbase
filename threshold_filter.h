@@ -4,7 +4,6 @@
 #include <algorithm>
 #include "png_toolkit.h"
 #include "support_filters.h"
-#include "bw_filter.h"
 
 class thresholdFilter : public AbstractFilter, support_filters
 {
