@@ -41,7 +41,7 @@ void blurFilter::apply(image_data &imageData, FilterData &data)
     curImage.w = imageData.w;
     size = curImage.h * curImage.w * curImage.compPerPixel;
     curImage.pixels = new stbi_uc[size];
-    //memcpy(curImage.pixels, imageData.pixels, size);
+    memcpy(curImage.pixels, imageData.pixels, size);
 
     for (int y = data.boarders[0]; y < data.boarders[2]; y++)
     {
