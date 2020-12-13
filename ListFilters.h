@@ -3,7 +3,6 @@
 #include <iostream>
 #include <map>
 #include "abstract_filter.h"
-#include "bw_filter.h"
 #include "red_filter.h"
 #include "threshold_filter.h"
 #include "edge_filter.h"
